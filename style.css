@@ -1,0 +1,108 @@
+body {
+  /* The body gets a grey background so that the page stands out on top of it */
+  background: #eee;
+}
+
+.page-container {
+  /* The page (paper) is white */
+  background: #fff;
+  /* Keep our desired width when adding padding */
+  box-sizing: border-box;
+  /* By setting the left and right margins to 'auto', the page will be horizontally centered */
+  margin: 0 auto;
+  /* A broadsheet newspaper is 22 inches long, but we use min-height here in case the content ends up longer in our Web version */
+  min-height: 22in;
+  /* The padding will be within the specified height and width due to the box-sizing property */
+  padding: .5in;
+  /* Yep, we can use inches (and centimeters) as units in CSS */
+  width: 11in;
+}
+
+.placeholder {
+  background: #ddd;
+  margin: 1em 0;
+  text-align: center;
+}
+
+/* Grid */
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6 {
+  /* Make sure the padding doesn't break the percentage widths */
+  box-sizing: border-box;
+  /* Have all the columns flow side-by-side */
+  float: left;
+  /* Left and right padding is half the gutter width */
+  padding: 0 4pt;
+}
+
+.row-1,
+.row-2,
+.row-3,
+.row-4,
+.row-5,
+.row-6 {
+  /* Left and right margins are negative half the gutter width */
+  margin: 0 -4pt;
+}
+
+.row-1 > .col-1,
+.row-2 > .col-2,
+.row-3 > .col-3,
+.row-4 > .col-4,
+.row-5 > .col-5,
+.row-6 > .col-6 {
+  width: 100%;
+}
+
+.row-2 > .col-1,
+.row-4 > .col-2,
+.row-6 > .col-3 {
+  width: 50%;
+}
+
+.row-3 > .col-1,
+.row-6 > .col-2 {
+  width: 33.333333%;
+}
+
+.row-3 > .col-2,
+.row-6 > .col-4 {
+  width: 66.666667%;
+}
+
+.row-4 > .col-1 {
+  width: 25%;
+}
+
+.row-4 > .col-3 {
+  width: 75%;
+}
+
+.row-5 > .col-1 {
+  width: 20%;
+}
+
+.row-5 > .col-2 {
+  width: 40%;
+}
+
+.row-5 > .col-3 {
+  width: 60%;
+}
+
+.row-5 > .col-4 {
+  width: 80%;
+}
+
+.row-6 > .col-1 {
+  width: 16.666667%
+}
+
+.row-6 > .col-5 {
+  width: 83.333333%
+}
