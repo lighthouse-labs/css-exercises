@@ -6,11 +6,11 @@ This exercise provides an idea for how to practice with CSS in the absence of We
 
 ## Find inspiration
 
-A quick Google image search for "newspaper design inspiration" led me to [this page](http://newspaperdesign.in/m/discussion?id=2134745%3ATopic%3A42622) about the design of the newspaper The National Post. Let's choose one of the pages displayed here and recrate it to the best of our abilities using HTML and CSS. How about this one?
+A quick Google image search for "newspaper design inspiration" led me to [this page](http://newspaperdesign.in/m/discussion?id=2134745%3ATopic%3A42622) about the design of the newspaper The National Post. Let's choose one of the pages displayed here and recreate it to the best of our abilities using HTML and CSS. How about this one?
 
 ![National Post spread](national-post-page.jpeg)
 
-I think that the "Post Sports" page on the right would provide a number of examples of common Web design challenges, so let's start there.
+I think that this would provide a number of examples of common Web design challenges, so let's start there.
 
 ## Rough it in
 
@@ -112,7 +112,7 @@ The next subdivision is in the "Right column". Below the yellow bar at the top i
 
 This is addressed by conventional grid systems by choosing a higher number of columns on the page and attempting to fit the design within clean divisions of those columns. However, in our case, we'll specify the number of columns that each row is divided into to get around this issue.
 
-Modify the markup to include this nested division (replacing the comment in the above code lising.)
+Modify the markup to include this nested division (replacing the comment in the above code listing.)
 
 ```html
 <div class="row-6">

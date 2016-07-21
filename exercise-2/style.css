@@ -1,0 +1,264 @@
+@import '../assets/Dustismo-Roman-fontfacekit/web fonts/dustismoroman_regular_macroman/stylesheet.css';
+@import '../assets/Dustismo-Roman-fontfacekit/web fonts/dustismoroman_bold_macroman/stylesheet.css';
+@import '../assets/Dustismo-Roman-fontfacekit/web fonts/dustismoroman_bolditalic_macroman/stylesheet.css';
+@import '../assets/Dustismo-Roman-fontfacekit/web fonts/dustismoroman_italic_macroman/stylesheet.css';
+@import 'https://fonts.googleapis.com/css?family=Pragati+Narrow:400,700';
+
+body {
+  /* The body gets a grey background so that the page stands out on top of it */
+  background: #eee;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.call-to-action {
+  font-family: dustismoroman_italic, serif;
+  font-style: italic;
+}
+
+.nav-article {
+  margin: 12pt 0;
+}
+
+.nav-article .call-to-action {
+  font-size: 12pt;
+  margin: 0;
+}
+
+.nav-article-heading {
+  font-family: dustismo_romanregular, serif;
+  font-weight: normal;
+  font-size: 26pt;
+  /* Don't need to take more space than necessary for headings */
+  line-height: 1;
+  /* Eliminate inherited margins */
+  margin: 0;
+}
+
+.nav-article-heading:after {
+  background: #fff;
+  /* content needs to be set, otherwise nothing appears */
+  content: '';
+  display: block;
+  height: 1px;
+  margin: 4pt auto;
+  width: 34pt;
+}
+
+.nav-article-hook {
+  font-family: dustismo_romanregular, serif;
+  font-size: 12pt;
+  font-weight: normal;
+  line-height: 14pt;
+  margin: 0;
+  word-spacing: -2pt;
+}
+
+.nav-article-subhead {
+  font-family: 'Pragati Narrow', sans-serif;
+  font-size: 16pt;
+  font-weight: normal;
+  line-height: 1;
+  margin: 8pt 0 0;
+  text-transform: uppercase;
+}
+
+.nav-brand {
+  /* This needs to be set so that the sideways text in .nav-title can be positioned absolutely */
+  position: relative;
+  /* This makes space for the sideways text */
+  padding-top: 9in;
+}
+
+.nav-brand-link {
+  font-family: 'Pragati Narrow', sans-serif;
+  font-size: 14pt;
+  margin: 4pt 0;
+}
+
+.nav-brand-mark {
+  border: 1px solid #fff;
+  font-family: dustismo_romanregular, serif;
+  font-size: 26pt;
+  font-weight: normal;
+  height: 34pt;
+  line-height: 34pt;
+  /* Left and right margins are set to auto to horizontally center the whole block */
+  margin: 0 auto;
+  /* This is set so that the generated :after content can be positioned absolutely */
+  position: relative;
+  text-align: center;
+  width: 34pt;
+}
+
+.nav-brand-mark:after {
+  bottom: -15pt;
+  content: '\27A4';
+  font-size: 15pt;
+  position: absolute;
+  right: -7pt;
+  text-shadow: 0 0 1px #000;
+  transform: rotate(-135deg);
+}
+
+.nav-news {
+  /* Font settings are here to avoid needing to style child elements directly */
+  font-family: 'Pragati Narrow', sans-serif;
+  font-size: 11pt;
+  line-height: 1;
+  margin: 8pt 0;
+}
+
+.nav-news img {
+  border: 6pt solid #fff;
+  /* This prevents weird spacing from placing the image on the text baseline */
+  display: block;
+  /* This centers the image after setting it to display block */
+  margin: 0 auto;
+}
+
+.nav-news p {
+  /* It can be assumed that if any p tags are within this module, their margins should be reset */
+  margin: 4pt 0;
+}
+
+.nav-news .call-to-action {
+  font-size: 9pt;
+}
+
+.nav-primary {
+  background: #f17030;
+  color: #fff;
+  padding: 4pt;
+  text-align: center;
+}
+
+.nav-title {
+  font-family: dustismo_romanregular, serif;
+  /* A lot of tweaking had to happen to find this font size */
+  font-size: 132pt;
+  font-weight: normal;
+  /* This element is positioned absolutely, so the left edge is a good place to put it horizontally */
+  left: 0;
+  /* The line-height property is used to make sure the sideways text has equal space on either side */
+  line-height: 98pt;
+  /* The element this class is applied to might have default margins, so this removes those */
+  margin: 0;
+  position: absolute;
+  /* Rather than using uppercase in the HTML, CSS can set text to uppercase (since it's presentational) */
+  text-transform: uppercase;
+  /* This value is used for the padding at the top of the header */
+  top: 9in;
+  /* These rules rotate the text */
+  transform: rotate(-90deg);
+  transform-origin: left top 0;
+  /* This prevents the text from wrapping, which it would do normally because it's SO BIG */
+  white-space: nowrap;
+}
+
+.page-container {
+  /* The page (paper) is white */
+  background: #fff;
+  /* Keep our desired width when adding padding */
+  box-sizing: border-box;
+  /* By setting the left and right margins to 'auto', the page will be horizontally centered */
+  margin: 0 auto;
+  /* A broadsheet newspaper is 22 inches long, but we use min-height here in case the content ends up longer in our Web version */
+  min-height: 22in;
+  /* The padding will be within the specified height and width due to the box-sizing property */
+  padding: .5in;
+  /* Yep, we can use inches (and centimeters) as units in CSS */
+  width: 11in;
+}
+
+.placeholder {
+  background: #ddd;
+  margin: 1em 0;
+  text-align: center;
+}
+
+/* Grid */
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6 {
+  /* Make sure the padding doesn't break the percentage widths */
+  box-sizing: border-box;
+  /* Have all the columns flow side-by-side */
+  float: left;
+  /* Left and right padding is half the gutter width */
+  padding: 0 4pt;
+}
+
+.row-1,
+.row-2,
+.row-3,
+.row-4,
+.row-5,
+.row-6 {
+  /* Left and right margins are negative half the gutter width */
+  margin: 0 -4pt;
+}
+
+.row-1 > .col-1,
+.row-2 > .col-2,
+.row-3 > .col-3,
+.row-4 > .col-4,
+.row-5 > .col-5,
+.row-6 > .col-6 {
+  width: 100%;
+}
+
+.row-2 > .col-1,
+.row-4 > .col-2,
+.row-6 > .col-3 {
+  width: 50%;
+}
+
+.row-3 > .col-1,
+.row-6 > .col-2 {
+  width: 33.333333%;
+}
+
+.row-3 > .col-2,
+.row-6 > .col-4 {
+  width: 66.666667%;
+}
+
+.row-4 > .col-1 {
+  width: 25%;
+}
+
+.row-4 > .col-3 {
+  width: 75%;
+}
+
+.row-5 > .col-1 {
+  width: 20%;
+}
+
+.row-5 > .col-2 {
+  width: 40%;
+}
+
+.row-5 > .col-3 {
+  width: 60%;
+}
+
+.row-5 > .col-4 {
+  width: 80%;
+}
+
+.row-6 > .col-1 {
+  width: 16.666667%
+}
+
+.row-6 > .col-5 {
+  width: 83.333333%
+}
