@@ -30,7 +30,8 @@ Then we can style it using these new classes. We will need to set the `<h1>` and
 .banner-article .call-to-action,
 .banner-article-heading {
   display: inline;
-  font-size: 21pt;
+  font-family: dustismo_romanregular, serif;
+  font-size: 23pt;
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -124,8 +125,8 @@ This looks pretty good, but where did the captions go?! Because the images are p
 .feature-photo figcaption {
   background: #fff;
   box-sizing: border-box;
-  font-family: dustismoroman_italic, serif;
-  font-size: 10pt;
+  font-family: Georgia, serif;
+  font-size: 9pt;
   left: 0;
   padding: 6pt;
   position: absolute;
