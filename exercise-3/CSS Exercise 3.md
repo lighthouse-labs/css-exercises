@@ -164,4 +164,4 @@ It's pretty close, but in the original design, the positions and alignment of ea
 
 There are probably ways that additional classes or ids could be added to the markup to make these `nth-child` selectors more robust, but because we have no expectation for this markup to change in the future, we're not running any risk by selecting the columns directly. Perhaps a semantic class identifying the purpose of the row and columns could rectify this.
 
-The last 
+The last few modules of content will be addressed in the next exercise.
