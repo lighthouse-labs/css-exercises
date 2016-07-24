@@ -12,7 +12,7 @@ Before we get to the photos, let's have an easy win with the yellow heading at t
 
 ```html
       <article class="banner-article">
-        <h1 class="banner-article-heading">Larry the duck's new name is causing a buzz</h1>
+        <h1 class="banner-article-heading">Larry the duck&rsquo;s new name is causing a buzz</h1>
         <p class="call-to-action"><a href="#S6">S6</a></p>
       </article>
 ```
@@ -128,7 +128,8 @@ This looks pretty good, but where did the captions go?! Because the images are p
   font-family: Georgia, serif;
   font-size: 9pt;
   left: 0;
-  padding: 6pt;
+  line-height: 1.2;
+  padding: 10pt 6pt;
   position: absolute;
   top: 55%;
   width: 75%;

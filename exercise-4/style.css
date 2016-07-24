@@ -16,6 +16,96 @@ a {
   text-decoration: none;
 }
 
+.article {
+  font-family: Georgia, serif;
+  font-size: 9pt;
+  line-height: 1.2;
+  text-align: justify;
+}
+
+.article p {
+  margin: 0;
+  text-indent: 1.5em;
+}
+
+/* This selector needs to be more specific than `.article p` in order to be able to override the text-indent property */
+.article p.lead {
+  text-indent: 0;
+}
+
+.article .call-to-action {
+  font-family: inherit;
+  font-style: normal;
+}
+
+.article .lead:first-letter {
+  color: #25669d;
+  float: left;
+  font-size: 3.9em;
+  line-height: .85;
+  margin-right: 2pt;
+}
+
+.article-author {
+  margin: 0;
+  text-align: center;
+}
+
+.article-author figcaption {
+  margin: 10pt 0;
+}
+
+/* Ensure author image is centered and doesn't bleed out of column */
+.article-author img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.article-author-location {
+  /* Puts this element on its own line */
+  display: block;
+  font-style: italic;
+}
+
+.article-author-name {
+  /* Puts this element on its own line */
+  display: block;
+  font-weight: bold;
+}
+
+/* Adds fixed width borders below header sections */
+.article-author:after,
+.article-heading:after,
+.article-subhead:after {
+  background: #000;
+  /* content needs to be set, otherwise nothing appears */
+  content: '';
+  display: block;
+  height: 1px;
+  margin: 10pt auto;
+  width: 34pt;
+}
+
+.article-heading {
+  font-family: dustismoroman_italic, serif;
+  font-size: 26pt;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+}
+
+.article-subhead {
+  font-family: dustismo_romanregular, serif;
+  font-size: 16pt;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+}
+
 .banner-article {
   background: #fcd243;
   margin: 0 0 16pt;
@@ -260,6 +350,11 @@ a {
   background: #ddd;
   margin: 1em 0;
   text-align: center;
+}
+
+.yelling {
+  font-style: normal;
+  text-transform: uppercase;
 }
 
 /* Grid */

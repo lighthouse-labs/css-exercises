@@ -51,6 +51,8 @@ Then, in the CSS file, add some styles to make this visible.
 body {
   /* The body gets a grey background so that the page stands out on top of it */
   background: #eee;
+  /* Ensure the default text colour contrasts with the default background */
+  color: #000;
 }
 .page-container {
   /* The page (paper) is white */
