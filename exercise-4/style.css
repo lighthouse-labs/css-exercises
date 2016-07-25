@@ -16,16 +16,67 @@ a {
   text-decoration: none;
 }
 
+cite {
+  font-style: normal;
+}
+
+q:after {
+  content: "\201D";
+}
+
+q:before {
+  content: "\201C";
+}
+
+.ad {
+  margin: 12pt 0 0;
+}
+
+.ad img {
+  display: block;
+  margin: 12pt 0;
+  max-width: 100%;
+}
+
 .article {
   font-family: Georgia, serif;
   font-size: 9pt;
-  line-height: 1.2;
+  line-height: 1.3;
   text-align: justify;
 }
 
 .article p {
   margin: 0;
   text-indent: 1.5em;
+}
+
+.article.quotes-article {
+  text-align: left;
+}
+
+.article.quotes-article p {
+  text-indent: 0;
+}
+
+.article.quotes-article q {
+  border-left: 4pt solid #ccc;
+  padding-left: 3pt;
+}
+
+.article.quotes-article .article-heading {
+  font-size: 18pt;
+  margin: 3pt 0 8pt;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.article.quotes-article .call-to-action {
+  text-indent: 7pt;
+}
+
+.article.quotes-article .quote-author {
+  font-family: 'Pragati Narrow', sans-serif;
+  font-weight: bold;
 }
 
 /* This selector needs to be more specific than `.article p` in order to be able to override the text-indent property */
@@ -76,8 +127,8 @@ a {
 
 /* Adds fixed width borders below header sections */
 .article-author:after,
-.article-heading:after,
-.article-subhead:after {
+.article-subhead:after,
+.article-subhead:before {
   background: #000;
   /* content needs to be set, otherwise nothing appears */
   content: '';
@@ -131,6 +182,93 @@ a {
   font-style: italic;
 }
 
+.feature-article .lead {
+  color: #999;
+  font-family: dustismo_romanregular, serif;
+  font-size: 19pt;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.feature-article .lead .toast {
+  color: #0f7a77;
+  display: block;
+  font-weight: normal;
+}
+
+.feature-article-header {
+  /* So that the subhead can be positioned absolutely */
+  position: relative;
+}
+
+.feature-article-heading {
+  font-family: 'Pragati Narrow', sans-serif;
+  font-size: 116pt;
+  font-weight: 200;
+  /* The font isn't as condensed as desired, so squish in, everybody */
+  letter-spacing: -5pt;
+  line-height: .75;
+  margin: 6pt 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.feature-article-heading:before,
+.feature-article-heading b:first-child:after,
+.feature-article-heading b:first-child:before {
+  /* By using both the top and bottom borders, the dots appear more like lines like in the design */
+  border-bottom: 5pt dotted #ccc;
+  border-top: 5pt dotted #ccc;
+  content: '';
+  display: block;
+  /* Setting negative margins the height of the border makes it fill the leading (gap) without adding space */
+  margin: -5pt auto;
+  width: 75%;
+}
+
+.feature-article-heading b {
+  color: #0f7a77;
+  /* So that each word is on a separate line */
+  display: block;
+  /* Being explicit, because we might consider overriding the default for b tags */
+  font-weight: bold;
+}
+
+.feature-article-subhead {
+  background: #f17030;
+  border: 4pt solid #f17030;
+  border-radius: 50%;
+  box-shadow: inset 0 0 1px 1px #fab990;
+  color: #fff;
+  font-family: 'Pragati Narrow', sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  /* This plus the top padding should equal the width in order to create a circle */
+  height: 52pt;
+  line-height: .8;
+  padding-top: 14pt;
+  position: absolute;
+  right: 0;
+  transform: rotate(-20deg);
+  text-align: center;
+  text-transform: uppercase;
+  top: 174pt;
+  width: 66pt;
+}
+
+.feature-article-subhead b {
+  color: #fab990;
+  display: block;
+  font-size: 28pt;
+  font-weight: normal;
+}
+
+.feature-article-subhead .credit {
+  color: #fab990;
+  display: block;
+  font-size: 8pt;
+}
+
 .feature-photo {
   /* Static height of the feature photos */
   height: 8in;
@@ -148,7 +286,7 @@ a {
   font-family: Georgia, serif;
   font-size: 9pt;
   left: 0;
-  line-height: 1.2;
+  line-height: 1.3;
   padding: 10pt 6pt;
   position: absolute;
   top: 55%;
@@ -383,6 +521,18 @@ a {
   margin: 0 -4pt;
 }
 
+/* This is a clearfix which ensures that columns don't bleed outside of their containing rows */
+.row-1:after,
+.row-2:after,
+.row-3:after,
+.row-4:after,
+.row-5:after,
+.row-6:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .row-1 > .col-1,
 .row-2 > .col-2,
 .row-3 > .col-3,
@@ -438,4 +588,24 @@ a {
 
 .row-6 > .col-5 {
   width: 83.333333%
+}
+
+.large-thematic-break-bottom {
+  border-bottom: 12pt solid #c6c6c6;
+}
+
+.medium-thematic-break-right {
+  border-right: 1pt solid #999;
+}
+
+.medium-thematic-break-top {
+  border-top: 1pt solid #999;
+}
+
+.small-thematic-break-left {
+  border-left: 1pt dotted #999;
+}
+
+.small-thematic-break-right {
+  border-right: 1pt dotted #999;
 }

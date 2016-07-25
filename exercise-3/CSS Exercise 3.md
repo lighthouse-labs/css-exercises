@@ -128,7 +128,7 @@ This looks pretty good, but where did the captions go?! Because the images are p
   font-family: Georgia, serif;
   font-size: 9pt;
   left: 0;
-  line-height: 1.2;
+  line-height: 1.3;
   padding: 10pt 6pt;
   position: absolute;
   top: 55%;

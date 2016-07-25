@@ -58,7 +58,7 @@ a {
   font-family: Georgia, serif;
   font-size: 9pt;
   left: 0;
-  line-height: 1.2;
+  line-height: 1.3;
   padding: 10pt 6pt;
   position: absolute;
   top: 55%;
@@ -286,6 +286,18 @@ a {
 .row-6 {
   /* Left and right margins are negative half the gutter width */
   margin: 0 -4pt;
+}
+
+/* This is a clearfix which ensures that columns don't bleed outside of their containing rows */
+.row-1:after,
+.row-2:after,
+.row-3:after,
+.row-4:after,
+.row-5:after,
+.row-6:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .row-1 > .col-1,

@@ -302,7 +302,7 @@ Modify the above CSS code by adding these properties.
 }
 ```
 
-Almost! This added gutters between the columns, but now nested columns have double the gutter they need. The solution is to give the row classes negative left and right margins that are the width of the gutter. Then everything will line up nicely.
+Almost! This added gutters between the columns, but now nested columns have double the gutter they need. The solution is to give the row classes negative left and right margins that are the width of the gutter. Then everything will line up nicely. While we're at it, let's prevent columns from escaping their row by adding a [clear fix](https://css-tricks.com/snippets/css/clear-fix/).
 
 Add the following CSS.
 
@@ -315,6 +315,18 @@ Add the following CSS.
 .row-6 {
   /* Left and right margins are negative half the gutter width */
   margin: 0 -4pt;
+}
+
+/* This is a clearfix which ensures that columns don't bleed outside of their containing rows */
+.row-1:after,
+.row-2:after,
+.row-3:after,
+.row-4:after,
+.row-5:after,
+.row-6:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 ```
 

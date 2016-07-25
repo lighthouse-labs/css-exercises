@@ -52,6 +52,18 @@ body {
   margin: 0 -4pt;
 }
 
+/* This is a clearfix which ensures that columns don't bleed outside of their containing rows */
+.row-1:after,
+.row-2:after,
+.row-3:after,
+.row-4:after,
+.row-5:after,
+.row-6:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .row-1 > .col-1,
 .row-2 > .col-2,
 .row-3 > .col-3,
