@@ -212,7 +212,7 @@ The first thing we should do is add a style for the `placeholder` class so that 
 }
 ```
 
-This will made the widths and positions of the placeholders evident.
+This will make the widths and positions of the placeholders evident.
 
 The next step is to set the widths of the columns appropriately. For each `row-n` class, we must style its child `col-n` classes to have the appropriate width. The CSS for that looks like this.
 
